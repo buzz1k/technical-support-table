@@ -13,7 +13,7 @@
 
 
             
-        <button type="button" class="btn btn-success btn-sm mt-4 mb-3">
+        <button type="button" class="btn btn-success btn-sm mt-4 mb-3" data-bs-toggle="modal" data-bs-target="#addTaskForm">
             Добавить
         </button>
          
@@ -36,7 +36,51 @@
                 </table>
 
             </div>
-    
+
+<!-- Modal -->
+  <div class="modal fade" id="addTaskForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog small">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Добавить заявку</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div style="display: flex;">
+                <div class="inputData">
+                    <label class="" for="" style="margin-right:15px;">Организация</label>
+                    <input id="companyName" class="form-control form-control-sm" type="Название организации" style="display: flex; width: 250px;">
+                </div>
+
+                <div class="inputData">
+                  <label class="" for="">Телефон</label>
+                  <div class="input-group mb-3 input-group-sm">
+                  
+                    <span class="input-group-text phone" id="inputGroup-sizing-sm">+7</span>
+                    <input id="companyPhone" type="text" class="form-control form-control-sm" placeholder="Номер телефона" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+              </div>         
+            </div>
+            <div class="inputData">
+              <label class="" for="">e-mail</label>
+              <input id="companyEmail" class="form-control form-control-sm" type="Название организации" style="width: 200px;">
+          </div>
+            <div>
+                <div class="inputData">
+                    <label class="" for="">Описание</label>
+                    <textarea class="form-control" id="description" style="width: 470px;"></textarea>
+                    <!-- <input id="description" class="form-control form-control-sm" type="Название организации" style="width: 470px;"> -->
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button id='addTaskButton' class="btn btn-primary btn-sm modal-success-btn" data-bs-dismiss="modal" onclick="addTask();">Добавить</button>
+          <button type="submit" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Отменить</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>
